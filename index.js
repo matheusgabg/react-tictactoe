@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-
-import Board from './components/board';
-
 import './style.css';
 
 class App extends Component {
@@ -15,7 +12,7 @@ class App extends Component {
 
   render() {
     return (
-      <Board />
+      <div>aaaaaaaaa</div>
     );
   }
 }
