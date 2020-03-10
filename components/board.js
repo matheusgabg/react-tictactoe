@@ -5,7 +5,7 @@ class Board extends Component {
     const status = 'Next player: X';
 
     return (
-      <div>this works!</div>
+      <div>this works!{this.status}</div>
     );
   }
 }
