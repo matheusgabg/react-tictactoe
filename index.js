@@ -14,9 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Game />
-      </div>
+      <Game />
     );
   }
 }

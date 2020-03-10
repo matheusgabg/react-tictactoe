@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import Board from './components/board'
 
 class Game extends Component{
   render(){
-    <div className="game">
-        <div className="game-board">
-          this works!
+    return (
+      <div className="game">
+          <div className="game-board">
+            this works!
+          </div>
+          <div className="game-info">
+            <div>{/* status */}</div>
+            <ol>{/* TODO */}</ol>
+          </div>
         </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
+      );
   }
 }
 
