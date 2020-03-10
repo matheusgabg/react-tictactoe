@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Board from '/components/board';
 
 class Game extends Component {
   render() {
     return (
       <div className="game">
         <div className="game-board">
-          aaqq
+          <Board />
         </div>
         <div className="game-info">
           <div>{/* status */}</div>
