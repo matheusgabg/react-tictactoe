@@ -31,7 +31,7 @@ class Game extends Component {
 
   */
   
-  handleClick(i) {
+  handleClick(event,i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -61,9 +61,10 @@ class Game extends Component {
       const value = (move % 2) === 0 ? 'O' : 'X';//inverse logic, odd moves ("1") should be X
       
       const desc = move ? "Go to move #" + move + "=> " + value + getRowCol(history[move].location) : "Go to game start";
+
       return (
           <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+            <button className={ history[move] === history[this.state.stepNumber] ? "current" : ""} onClick={() => this.jumpTo(move)}>{desc}</button>
           </li>
         );
     });
@@ -77,7 +78,7 @@ class Game extends Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board squares={current.squares} onClick={i => this.handleClick(i)} />
+          <Board squares={current.squares} onClick={(e, i) => this.handleClick(e, i)} />
         </div>
         <div className="game-info">
           <div>{status}</div>

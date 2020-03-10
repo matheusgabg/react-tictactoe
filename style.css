@@ -3,6 +3,10 @@ body {
   margin: 20px;
 }
 
+.current{
+  background-color: aliceblue;
+}
+
 ol, ul {
   padding-left: 30px;
 }
